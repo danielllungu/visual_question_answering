@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Visual Question Answering</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+
+body, html {height: 100%}
+
+body {
+    background-image: url('../static/background_ai.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+p{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div class="w3-display-top">
+    <br><br>
+    <h1 class="w3-jumbo w3-animate-top" style="color: white">Visual Question Answering</h1><br><br><br>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label style="font-size: 160%; color: white; margin-left: 300px">Select image:</label>
+          <div class="custom-file">
+              <input style="font-size: 150%; margin-left: 300px" type="file" class="custom-file-input" name="image" id="image" accept=".jpg, .jpeg, .png">
+              <input name="action" value="Upload" style="margin-left: 230px; margin-top: 10px; font-weight: bold; font-size: 150%; background: lightskyblue; color: black; position: absolute" type="submit" class="btn btn-primary">
+          </div>
+          <div>
+              <label for="url" style="font-size: 160%;margin-left: 300px;font-weight: bold; color: white">URL:  </label>
+              <input type="text" placeholder="Or insert image URL here..." id="url" value="{{ url }}" maxlength="1000" size="40" style="font-size: 130%; margin-left: 50px" name="url"><br>
+          </div>
+          <div>
+              <br>
+              <label for="question" style="font-size: 160%;margin-left: 300px;font-weight: bold; color: white">Your question:  </label>
+              <input type="text" id="question" value="{{ question }}" maxlength="1000" size="40" style="font-size: 130%; margin-left: 50px" name="question">
+              <input name="action" value="Submit" style="margin-left: 30px; font-weight: bold; font-size: 150%; background: lightskyblue; color: black" type="submit" class="btn btn-primary"><br><br>
+
+          </div>
+
+        </div>
+
+    </form>
+
+    <div>
+        <br>
+        <img style="max-width: 35%; max-height: 35%; margin-left: 900px; margin-top: 5px; position: absolute;" class="preview-image" src="{{url_for('static', filename=upload)}}" alt="Uploaded Image">
+        <label for="answer1" style="font-size: 160%;margin-left: 50px; font-weight: bold; color: white">Predicted answer 1:  </label>
+        <input type="text" value="{{ answer1 }}" id="answer1" maxlength="1000" size="40" style="font-size: 130%; margin-left: 50px" name="answer1" readonly><br>
+        <label for="answer2" style="font-size: 160%;margin-left: 50px; font-weight: bold; color: white">Predicted answer 2:  </label>
+        <input type="text" value="{{ answer2 }}" id="answer2" maxlength="1000" size="40" style="font-size: 130%; margin-left: 50px" name="answer2" readonly><br>
+        <label for="answer3" style="font-size: 160%;margin-left: 50px; font-weight: bold; color: white">Predicted answer 3:  </label>
+        <input type="text" value="{{ answer3 }}" id="answer3" maxlength="1000" size="40" style="font-size: 130%; margin-left: 50px" name="answer3" readonly><br>
+        <label for="answer4" style="font-size: 160%;margin-left: 50px; font-weight: bold; color: white">Predicted answer 4:  </label>
+        <input type="text" value="{{ answer4 }}" id="answer4" maxlength="1000" size="40" style="font-size: 130%; margin-left: 50px" name="answer4" readonly><br>
+        <label for="answer5" style="font-size: 160%;margin-left: 50px; font-weight: bold; color: white">Predicted answer 5:  </label>
+        <input type="text" value="{{ answer5 }}" id="answer5" maxlength="1000" size="40" style="font-size: 130%; margin-left: 50px" name="answer5" readonly><br>
+
+    </div>
+    <br><br>
+
+
+</div>
+
+
+
+</body>
+</html>
