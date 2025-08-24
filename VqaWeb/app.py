@@ -7,7 +7,7 @@ import requests
 
 app = Flask(__name__)
 
-app.config["IMAGE_UPLOADS"] = "D:/facultate/An 3/LICENTA/VqaWeb/static/images"
+app.config["IMAGE_UPLOADS"] = "static/images"
 pair = {"image": "", "question": ""}
 
 fasttext_model = utils.load_fasttext_from_pc()

@@ -171,12 +171,12 @@ def test_images_questions():
               'class/classroom/room/professor/person/man', 'ski/skiing/snow/mountain', 'hawk/bird/eagle', 'bear/bears',
               'parachute/mountain', 'tiger/animal/cat', 'lake/clouds', 'ball/basket/basketball', 'road/street', 'sunset/person/mountain/riding',
               'skateboard/board/skate', 'crayons/colors', 'horse/beach/sky/sea/ocean']
-    checkpoint_ssl_resnet50 = r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_SSL_ResNet50\weights\VQA_exp_SSL_ResNet50\version_1\checkpoints\epoch=49-step=12300.ckpt"
-    checkpoint_regnety = r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_RegNetY\weights\VQA_exp_RegNetY\version_2\checkpoints\epoch=69-step=17220.ckpt"
-    checkpoint_resnest50d = r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_ResNest50d\weights\VQA_exp_ResNest50d\version_0\checkpoints\epoch=79-step=19680.ckpt"
-    checkpoint_swin = r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_Swin_tiny\weights\VQA_exp_Swin_tiny\version_0\checkpoints\epoch=69-step=8610.ckpt"
-    checkpoint_convnext = r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_ConvNext_Tiny\weights\VQA_exp_ConvNext_Tiny\version_0\checkpoints\epoch=79-step=19680.ckpt"
-    checkpoint_resnet50_last_version =  r"D:\facultate\An 3\LICENTA\VqaWeb\checkpoint\version8\weights\version_8\checkpoints\epoch=99-step=24600.ckpt"
+    checkpoint_ssl_resnet50 = r"logs\comparing_models\VQA_exp_SSL_ResNet50\weights\VQA_exp_SSL_ResNet50\version_1\checkpoints\epoch=49-step=12300.ckpt"
+    checkpoint_regnety = r"logs\comparing_models\VQA_exp_RegNetY\weights\VQA_exp_RegNetY\version_2\checkpoints\epoch=69-step=17220.ckpt"
+    checkpoint_resnest50d = r"logs\comparing_models\VQA_exp_ResNest50d\weights\VQA_exp_ResNest50d\version_0\checkpoints\epoch=79-step=19680.ckpt"
+    checkpoint_swin = r"logs\comparing_models\VQA_exp_Swin_tiny\weights\VQA_exp_Swin_tiny\version_0\checkpoints\epoch=69-step=8610.ckpt"
+    checkpoint_convnext = r"logs\comparing_models\VQA_exp_ConvNext_Tiny\weights\VQA_exp_ConvNext_Tiny\version_0\checkpoints\epoch=79-step=19680.ckpt"
+    checkpoint_resnet50_last_version =  r"VqaWeb\checkpoint\version8\weights\version_8\checkpoints\epoch=99-step=24600.ckpt"
 
     vqa_ssl = VqaSSL.load_from_checkpoint(checkpoint_ssl_resnet50)
     vqa_regnety = VqaRegnety.load_from_checkpoint(checkpoint_regnety)

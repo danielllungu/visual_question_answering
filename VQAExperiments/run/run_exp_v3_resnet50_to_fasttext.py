@@ -96,7 +96,7 @@ class VQANetwork(pl.LightningModule):
 
 if __name__ == '__main__':
     model = VQANetwork()
-    log_path = r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs"
+    log_path = r"logs"
     experiment_name = "VQA_test_exp"
     tb_logger = loggers.TensorBoardLogger(log_path, experiment_name)
     save_dir = log_path + "\\" + experiment_name

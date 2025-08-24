@@ -72,7 +72,7 @@ def load_fasttext_pretrained_model():
 
 def load_fasttext_from_pc():
     compress_model = compress_fasttext.models.CompressedFastTextKeyedVectors.load(
-        r"D:\facultate\An 3\LICENTA\compressed_fasttext_pretrained\cc.en.300.compressed.bin"
+        r"compressed_fasttext_pretrained\cc.en.300.compressed.bin"
     )
 
     return compress_model

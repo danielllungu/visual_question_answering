@@ -191,9 +191,9 @@ def save_bert_embeddings_v2_only_text():  # All text (including black and white)
     :return: None
     """
     tokenizer, bert_model = get_bert_tokenizer_and_model()
-    real_train = torch.load(r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\real_train.pt")
+    real_train = torch.load(r"dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\real_train.pt")
     # path_to_save_train_ssd = r"E:\Dataset\Embeddings\Bert\Train"
-    path_to_save_train = r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\Train"
+    path_to_save_train = r"dataset\COCO V2 Bert Embeddings Text\Train"
     index = 0
     for element in real_train:
         if index > 137300:
@@ -221,8 +221,8 @@ def save_bert_embeddings_v2_text(data_type, tokenizer, bert_model):
     :return: None
     """
     if data_type == "real val":
-        real_val = torch.load(r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\real_val.pt")
-        path_to_save_val = r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\REAL VALIDATION"
+        real_val = torch.load(r"dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\real_val.pt")
+        path_to_save_val = r"dataset\COCO V2 Bert Embeddings Text\REAL VALIDATION"
         index = 0
         for element in real_val:
             question_embedding = get_bert_embedding_sentence_or_word_not_in_dict(element["question"], bert_model,
@@ -240,8 +240,8 @@ def save_bert_embeddings_v2_text(data_type, tokenizer, bert_model):
             index = index + 1
 
     elif data_type == "abstract train":
-        abstract_train = torch.load(r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\abstract_train.pt")
-        path_to_save_train = r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\ABSTRACT TRAIN"
+        abstract_train = torch.load(r"dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\abstract_train.pt")
+        path_to_save_train = r"dataset\COCO V2 Bert Embeddings Text\ABSTRACT TRAIN"
         index = 0
         for element in abstract_train:
             question_embedding = get_bert_embedding_sentence_or_word_not_in_dict(element["question"], bert_model,
@@ -259,8 +259,8 @@ def save_bert_embeddings_v2_text(data_type, tokenizer, bert_model):
             index = index + 1
 
     elif data_type == "abstract val":
-        abstract_val = torch.load(r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\abstract_validation.pt")
-        path_to_save_val = r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\ABSTRACT VALIDATION"
+        abstract_val = torch.load(r"dataset\COCO V2 Bert Embeddings Text\dataset images questions answers\abstract_validation.pt")
+        path_to_save_val = r"dataset\COCO V2 Bert Embeddings Text\ABSTRACT VALIDATION"
         index = 0
         for element in abstract_val:
             question_embedding = get_bert_embedding_sentence_or_word_not_in_dict(element["question"], bert_model,
@@ -363,7 +363,7 @@ def get_bert_vocab_embeddings():
     """
     :return: dict Bert embeddings
     """
-    bert_embeds = torch.load(r"D:\facultate\An 3\LICENTA\dataset\COCO V2 Bert Embeddings Text\bert_embeddings_updated.pt")
+    bert_embeds = torch.load(r"dataset\COCO V2 Bert Embeddings Text\bert_embeddings_updated.pt")
 
     return bert_embeds
 
@@ -376,7 +376,7 @@ def save_bert_embeddings(data_type, tokenizer, bert_embeddings):
     :param bert_embeddings: dict bert embeddings
     :return:
     """
-    source = r"D:\facultate\An 3\LICENTA\dataset\COCO V2"
+    source = r"dataset\COCO V2"
     if data_type == "train":
         print("Saving train data")
         data1 = torch.load(source + r"\dataset images questions answers\real_train.pt")
@@ -440,16 +440,16 @@ def get_text_embedding_fasttext(question, model):
 
 
 def save_fasttext_embeddings_v2(model, data_type):
-    source = r"D:\facultate\An 3\LICENTA\dataset\COCO V2"
+    source = r"dataset\COCO V2"
     if data_type == "train":
         data1 = torch.load(source + r"\dataset images questions answers\real_train.pt")
         data2 = torch.load(source + r"\dataset images questions answers\abstract_train.pt")
-        path_to_save = r"D:\facultate\An 3\LICENTA\dataset\Fasttext V2\TRAIN"
+        path_to_save = r"dataset\Fasttext V2\TRAIN"
 
     else:
         data1 = torch.load(source + r"\dataset images questions answers\real_val.pt")
         data2 = torch.load(source + r"\dataset images questions answers\abstract_validation.pt")
-        path_to_save = r"D:\facultate\An 3\LICENTA\dataset\Fasttext V2\VALIDATION"
+        path_to_save = r"dataset\Fasttext V2\VALIDATION"
 
     index = 0
     print("real")

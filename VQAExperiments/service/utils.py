@@ -1341,7 +1341,7 @@ def get_validation_index_bert(index):
 
 
 def load_word2vec_model():
-    model = Word2Vec.load(r"D:\facultate\An 3\LICENTA\WORD2VEC_MODEL\word2vec_model.model")
+    model = Word2Vec.load(r"WORD2VEC_MODEL\word2vec_model.model")
 
     return model
 
@@ -1579,7 +1579,7 @@ def verify_dataset_vocab(word2vec_model):
                     unique_words.append(word_answer)
 
     print(len(unique_words))
-    torch.save(unique_words, r"D:\facultate\An 3\LICENTA\WORDS NOT IN VOCABULARY\unique_words_com.pt")
+    torch.save(unique_words, r"WORDS NOT IN VOCABULARY\unique_words_com.pt")
     print("saved")
 
 

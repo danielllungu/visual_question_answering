@@ -35,7 +35,7 @@ def inference_ssl_resnet50(path, question_text):
     from run.run_exp_v8_ssl_resnet50_to_fasttext import VQANetwork
     img2feat = ImageFeatures(model_name='ssl_resnet50', do_norm=False)
     vqa = VQANetwork.load_from_checkpoint(
-        r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_SSL_ResNet50\weights\VQA_exp_SSL_ResNet50\version_1\checkpoints\epoch=49-step=12300.ckpt")
+        r"logs\comparing_models\VQA_exp_SSL_ResNet50\weights\VQA_exp_SSL_ResNet50\version_1\checkpoints\epoch=49-step=12300.ckpt")
     fasttext = utils.load_fasttext_pretrained_model()
     inference(vqa, fasttext, img2feat, path, question_text)
 
@@ -44,7 +44,7 @@ def inference_regnety(path, question_text):
     from run.run_exp_v6_regnety_to_fasttext import VQANetwork
     img2feat = ImageFeatures(model_name='regnety_040', do_norm=False)
     vqa = VQANetwork.load_from_checkpoint(
-        r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_RegNetY\weights\VQA_exp_RegNetY\version_2\checkpoints\epoch=69-step=17220.ckpt")
+        r"logs\comparing_models\VQA_exp_RegNetY\weights\VQA_exp_RegNetY\version_2\checkpoints\epoch=69-step=17220.ckpt")
     fasttext = utils.load_fasttext_pretrained_model()
     inference(vqa, fasttext, img2feat, path, question_text)
 
@@ -53,7 +53,7 @@ def inference_resnest50d(path, question_text):
     from run.run_exp_v9_resnest_to_fasttext import VQANetwork
     img2feat = ImageFeatures(model_name='resnest50d', do_norm=False)
     vqa = VQANetwork.load_from_checkpoint(
-        r"D:\facultate\An 3\LICENTA\VQAProjectV2\logs\comparing_models\VQA_exp_ResNest50d\weights\VQA_exp_ResNest50d\version_0\checkpoints\epoch=79-step=19680.ckpt")
+        r"logs\comparing_models\VQA_exp_ResNest50d\weights\VQA_exp_ResNest50d\version_0\checkpoints\epoch=79-step=19680.ckpt")
     fasttext = utils.load_fasttext_pretrained_model()
     inference(vqa, fasttext, img2feat, path, question_text)
 
